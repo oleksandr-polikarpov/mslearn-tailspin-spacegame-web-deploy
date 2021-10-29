@@ -12,7 +12,7 @@ stages:
   - job: 'Build'
     displayName: 'Build job'
     pool:
-      vmImage: 'Self'
+      name: 'Self'
       demands:
       - npm
 
@@ -78,7 +78,7 @@ stages:
   jobs:
   - deployment: Deploy
     pool:
-      vmImage: 'Self'
+      name: 'Self'
     environment: dev
     variables:
     - group: Release
